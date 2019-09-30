@@ -104,7 +104,7 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void showSuccesToast() {
-        Toasty.Show_Toast(getApplicationContext(), this.findViewById(android.R.id.content)
+        Toasty.Show_Toast(getApplicationContext(    ), this.findViewById(android.R.id.content)
                 , "Successful");
     }
 }
