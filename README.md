@@ -1,5 +1,5 @@
 # MyShoppingList
  shoppingListUsing Firebase
  
-  # Screens 
- ![](Screens/one.jpg)
+  # ScreenShot
+ ![](Screen/one.jpg)
