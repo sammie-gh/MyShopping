@@ -70,11 +70,12 @@ public class RegistrationActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
                             startActivity(new Intent(getApplicationContext(),HomeActivity.class));
 //                            Toast.makeText(getApplicationContext(),"Successful",Toast.LENGTH_SHORT).show();
-                            Toasty.Show_Toast(getApplicationContext(), R.id.content, "Successful");
+                            showSuccesToast();
+
                             mDialog.dismiss();
 
                         }else {
-                            Toast.makeText(getApplicationContext(),"Failed..",Toast.LENGTH_SHORT).show();
+                           showFailedToast();
                             mDialog.dismiss();
                         }
 
@@ -95,5 +96,15 @@ public class RegistrationActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void showFailedToast() {
+        Toasty.Show_Toast(getApplicationContext(), this.findViewById(android.R.id.content)
+                , "Failed");
+    }
+
+    private void showSuccesToast() {
+        Toasty.Show_Toast(getApplicationContext(), this.findViewById(android.R.id.content)
+                , "Successful");
     }
 }
